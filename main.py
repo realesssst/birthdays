@@ -7,7 +7,7 @@ def get_birthdays_per_week(users):
     this_week_birthdays = {i: [] for i in range(7)}
 
     for user in users:
-        user["birthday"] = datetime(user["birthday"].year, user["birthday"].month, user["birthday"].day)
+        user["birthday"] = datetime(current_date.year, user["birthday"].month, user["birthday"].day)
         birthday = user["birthday"]
 
         if current_date <= birthday <= week_later:
